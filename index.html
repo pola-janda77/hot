@@ -3,165 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pola Janda - Berita Terkini & Trending</title>
+<title>Pola Janda - Portal Berita Profesional</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
 :root {
-  --primary: #00c897;
-  --secondary: #121212;
-  --accent: #ff4d6d;
-  --light: #f8f9fa;
-  --dark: #1f1f1f;
+  --primary: #e63946;
+  --secondary: #1d3557;
+  --light: #f1faee;
+  --dark: #343a40;
+  --accent: #a8dadc;
 }
-body {margin: 0; font-family: 'Poppins', sans-serif; background: var(--light); color: var(--dark); scroll-behavior: smooth;}
-header {background: var(--secondary); position: sticky; top: 0; z-index: 999; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;}
-.logo {font-size: 1.8rem; font-weight: bold; color: var(--primary);}
-nav ul {list-style: none; display: flex; gap: 2rem;}
-nav a {color: var(--light); text-decoration: none; font-weight: 500;}
-nav a:hover {color: var(--primary);}
-
-.hero {background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1536240478700-b8696fa06c9a') center/cover no-repeat; height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--light);}
-.hero h1 {font-size: 3rem; margin-bottom: 1rem;}
-.hero p {font-size: 1.2rem; margin-bottom: 2rem;}
-.hero .btn {padding: 0.8rem 1.8rem; background: var(--primary); border: none; border-radius: 30px; color: white; font-weight: bold; text-decoration: none; transition: background 0.3s ease;}
-.hero .btn:hover {background: var(--accent);}
-
-.breaking-news {background: var(--primary); color: #fff; padding: 0.8rem; display: flex; align-items: center; overflow: hidden;}
-.breaking-label {background: #fff; color: var(--primary); padding: 0.4rem 1rem; margin-right: 1rem; border-radius: 20px; font-weight: bold;}
-.marquee {white-space: nowrap; overflow: hidden; position: relative;}
-.marquee-content {display: inline-block; padding-left: 100%; animation: marquee 25s linear infinite;}
-@keyframes marquee {0% {transform: translate(0);} 100% {transform: translate(-100%);}}
-
-.section {padding: 4rem 2rem; max-width: 1200px; margin: auto;}
-.section-title {text-align: center; margin-bottom: 3rem; font-size: 2rem; color: var(--secondary);}
-.news-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;}
-.news-card {background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.4s;}
-.news-card:hover {transform: scale(1.03);}
-.news-card img {width: 100%; height: 200px; object-fit: cover;}
-.news-card-content {padding: 1rem;}
-.news-card-content h3 {margin: 0 0 1rem;}
-.news-card-content p {font-size: 0.9rem; color: #555;}
-
-.categories {display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;}
-.category {background: var(--accent); padding: 1rem 2rem; border-radius: 30px; color: white; font-weight: bold; transition: background 0.3s; cursor: pointer;}
-.category:hover {background: var(--primary);}
-
-.newsletter {background: var(--dark); color: white; text-align: center; padding: 4rem 2rem;}
-.newsletter input {padding: 10px 20px; border-radius: 30px; border: none; margin-right: 10px; width: 250px;}
-.newsletter button {padding: 10px 20px; border-radius: 30px; border: none; background: var(--accent); color: white; font-weight: bold; cursor: pointer; transition: background 0.3s ease;}
-.newsletter button:hover {background: var(--primary);}
-
-footer {background: var(--secondary); color: #bbb; padding: 3rem 2rem; font-size: 0.9rem;}
-.footer-container {max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;}
-.footer-col {flex: 1 1 200px;}
-.footer-col h3 {margin-bottom: 1rem; color: var(--primary);}
-.footer-bottom {text-align: center; margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem;}
-
-#topBtn {position: fixed; bottom: 20px; right: 20px; background: var(--accent); border: none; padding: 10px; border-radius: 50%; color: white; font-size: 18px; display: none; cursor: pointer;}
+body {margin:0; font-family:'Poppins',sans-serif; background:var(--light); color:var(--dark);}
+header {background:var(--secondary); color:var(--light); padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:999;}
+header .logo {font-size:1.8rem; font-weight:bold;}
+nav ul {list-style:none; display:flex; gap:2rem;}
+nav a {color:var(--light); text-decoration:none; font-weight:500;}
+nav a:hover {color:var(--accent);}
+.hero {background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')center/cover no-repeat; height:75vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white;}
+.hero h1 {font-size:3rem; margin-bottom:1rem;}
+.hero p {font-size:1.2rem; margin-bottom:2rem;}
+.hero a {padding:0.8rem 1.8rem; background:var(--primary); border:none; border-radius:30px; color:white; font-weight:bold; text-decoration:none;}
+.breaking-news {background:var(--primary); color:white; padding:0.8rem; overflow:hidden; display:flex; align-items:center;}
+.breaking-label {background:white; color:var(--primary); padding:0.3rem 1rem; margin-right:1rem; border-radius:20px; font-weight:bold;}
+.marquee {white-space:nowrap; overflow:hidden;}
+.marquee-content {display:inline-block; padding-left:100%; animation:marquee 20s linear infinite;}
+@keyframes marquee {0%{transform:translate(0);}100%{transform:translate(-100%);}}
+.main-content {display:flex; gap:2rem; padding:4rem 2rem; max-width:1200px; margin:auto;}
+.main-left {flex:2;}
+.main-right {flex:1; background:var(--accent); padding:2rem; border-radius:10px;}
+.article {background:white; margin-bottom:2rem; padding:1rem; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+.article img {width:100%; height:200px; object-fit:cover; border-radius:10px;}
+.article h3 {margin:1rem 0;}
+.popular-posts h3, .newsletter-box h3, .tags h3 {margin-bottom:1rem;}
+.popular-posts ul {list-style:none; padding:0;}
+.popular-posts li {margin-bottom:0.5rem;}
+.tags {margin-top:2rem;}
+.tags span {display:inline-block; background:var(--secondary); color:white; padding:0.4rem 0.8rem; border-radius:20px; margin:0.2rem; font-size:0.8rem;}
+.categories {background:white; padding:4rem 2rem; text-align:center;}
+.categories h2 {margin-bottom:3rem;}
+.categories-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:1rem;}
+.category {background:var(--secondary); color:white; padding:1.5rem; border-radius:10px; transition:background 0.3s;}
+.category:hover {background:var(--primary);}
+footer {background:var(--secondary); color:var(--light); padding:4rem 2rem 2rem;}
+.footer-container {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem;}
+.footer-bottom {text-align:center; margin-top:2rem; font-size:0.8rem; color:var(--accent);}
+footer h3 {margin-bottom:1rem;}
+footer ul {list-style:none; padding:0;}
+footer a {color:var(--light); text-decoration:none; font-size:0.9rem;}
+footer a:hover {color:var(--accent);}
+#topBtn {position:fixed; bottom:20px; right:20px; background:var(--primary); border:none; padding:10px 15px; border-radius:50%; color:white; font-size:18px; display:none; cursor:pointer;}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Pola<span>Janda</span></div>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#news">Berita</a></li>
-      <li><a href="#kategori">Kategori</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </nav>
+<div class="logo">Pola<span>Janda77</span></div>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#berita">Berita</a></li>
+<li><a href="#kategori">Kategori</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+</nav>
 </header>
 
 <section class="hero">
-  <h1>Berita Terkini Setiap Saat</h1>
-  <p>Informasi Aktual di Genggaman Anda</p>
-  <a href="#news" class="btn">Baca Berita Terbaru</a>
+<h1>Informasi Terkini Dunia Janda</h1>
+<p>Mengungkap Berita dengan Gaya Berbeda</p>
+<a href="#berita">Jelajahi Berita</a>
 </section>
 
 <div class="breaking-news">
-  <div class="breaking-label">LIVE</div>
-  <div class="marquee">
-    <div class="marquee-content">[Breaking] Ekonomi Global Menguat • [Update] Teknologi AI 2025 Melonjak • [Trending] Pola Janda Capai 1 Juta Pembaca!</div>
-  </div>
+<div class="breaking-label">LIVE</div>
+<div class="marquee">
+<div class="marquee-content">[Hot] Kebijakan Ekonomi Terbaru Mengguncang Pasar • [Update] Pola Janda Capai Rekor Pembaca Harian • [Info] Tips Investasi Digital!</div>
+</div>
 </div>
 
-<section id="news" class="section">
-  <h2 class="section-title">Berita Utama</h2>
-  <div class="news-grid">
-    <div class="news-card">
-      <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d" alt="News">
-      <div class="news-card-content">
-        <h3>Revolusi Teknologi AI di Tahun 2025</h3>
-        <p>Bagaimana AI mengubah seluruh dunia kerja dan bisnis global.</p>
-      </div>
-    </div>
-    <div class="news-card">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="News">
-      <div class="news-card-content">
-        <h3>Inovasi Startup Asia Pasifik Mendunia</h3>
-        <p>Pola baru investasi teknologi hijau membawa perubahan besar.</p>
-      </div>
-    </div>
-  </div>
+<section class="main-content" id="berita">
+<div class="main-left">
+<div class="article">
+<img src="https://images.unsplash.com/photo-1557683316-973673baf926" alt="">
+<h3>Teknologi Baru Membentuk Masa Depan Dunia</h3>
+<p>Perkembangan AI dan blockchain mempercepat transformasi digital global di berbagai sektor industri.</p>
+</div>
+<div class="article">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="">
+<h3>Tren Ekonomi 2025: Apa yang Perlu Anda Ketahui</h3>
+<p>Analisis mendalam tentang perubahan besar dalam struktur ekonomi dunia pasca pandemi.</p>
+</div>
+</div>
+<div class="main-right">
+<div class="popular-posts">
+<h3>Berita Populer</h3>
+<ul>
+<li><a href="#">Pola Janda dan Revolusi Informasi</a></li>
+<li><a href="#">Strategi Investasi Digital 2025</a></li>
+<li><a href="#">Fenomena Startup Teknologi Hijau</a></li>
+</ul>
+</div>
+<div class="newsletter-box">
+<h3>Newsletter</h3>
+<form>
+<input type="email" placeholder="Email Anda" style="width:100%;padding:10px;border:none;border-radius:5px;margin-bottom:10px;">
+<button style="width:100%;padding:10px;background:var(--primary);border:none;color:white;border-radius:5px;">Berlangganan</button>
+</form>
+</div>
+<div class="tags">
+<h3>Tags</h3>
+<span>Teknologi</span><span>Ekonomi</span><span>Startup</span><span>Politik</span>
+</div>
+</div>
 </section>
 
-<section id="kategori" class="section">
-  <h2 class="section-title">Kategori</h2>
-  <div class="categories">
-    <div class="category">Politik</div>
-    <div class="category">Ekonomi</div>
-    <div class="category">Teknologi</div>
-    <div class="category">Olahraga</div>
-    <div class="category">Hiburan</div>
-    <div class="category">Kesehatan</div>
-  </div>
-</section>
-
-<section class="newsletter">
-  <h2>Berlangganan Untuk Update Terbaru</h2>
-  <form>
-    <input type="email" placeholder="Masukkan Email Anda">
-    <button type="submit">Langganan</button>
-  </form>
+<section class="categories" id="kategori">
+<h2>Kategori Berita</h2>
+<div class="categories-grid">
+<div class="category">Politik</div>
+<div class="category">Ekonomi</div>
+<div class="category">Teknologi</div>
+<div class="category">Olahraga</div>
+<div class="category">Hiburan</div>
+<div class="category">Kesehatan</div>
+</div>
 </section>
 
 <footer id="kontak">
-  <div class="footer-container">
-    <div class="footer-col">
-      <h3>Tentang Kami</h3>
-      <p>Pola Janda adalah portal berita digital terpercaya, menghadirkan berita terkini dan terverifikasi.</p>
-    </div>
-    <div class="footer-col">
-      <h3>Kategori</h3>
-      <p>Politik | Teknologi | Ekonomi | Hiburan</p>
-    </div>
-    <div class="footer-col">
-      <h3>Kontak</h3>
-      <p>Email: info@polajanda.com</p>
-      <p>Telepon: (021) 9876-5432</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2025 Pola Janda - All Rights Reserved
-  </div>
+<div class="footer-container">
+<div>
+<h3>Tentang Pola Janda</h3>
+<p>Pola Janda adalah portal berita independen yang menghadirkan informasi aktual, terpercaya, dan inspiratif kepada publik.</p>
+</div>
+<div>
+<h3>Kategori Populer</h3>
+<ul>
+<li><a href="#">Teknologi</a></li>
+<li><a href="#">Ekonomi</a></li>
+<li><a href="#">Politik</a></li>
+<li><a href="#">Startup</a></li>
+</ul>
+</div>
+<div>
+<h3>Tautan Cepat</h3>
+<ul>
+<li><a href="#">Tentang Kami</a></li>
+<li><a href="#">Redaksi</a></li>
+<li><a href="#">Kebijakan Privasi</a></li>
+<li><a href="#">Syarat & Ketentuan</a></li>
+</ul>
+</div>
+<div>
+<h3>Kontak</h3>
+<ul>
+<li>Email: info@polajanda.com</li>
+<li>Phone: (021) 1234-5678</li>
+<li>Alamat: Jakarta, Indonesia</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; 2025 Pola Janda - All Rights Reserved.
+</div>
 </footer>
 
-<button id="topBtn">↑</button>
-
+<button id="topBtn">&#8679;</button>
 <script>
-const topBtn = document.getElementById('topBtn');
-window.onscroll = function() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-};
-topBtn.addEventListener('click', function(){
-  window.scrollTo({top: 0, behavior: 'smooth'});
-});
+const topBtn=document.getElementById('topBtn');
+window.onscroll=function(){
+if(document.body.scrollTop>200||document.documentElement.scrollTop>200){
+topBtn.style.display="block";
+}else{topBtn.style.display="none";}};
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 </script>
 
 </body>
